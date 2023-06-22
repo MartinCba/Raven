@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --color-primario: #c7a17a;
+  --color-fondo: #f9f5f0;
+  --color-oscuro: #151515;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", "Sans-serif";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*?---------------UTILIDADES---------------*/
+
+.contenedor {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+/*?---------------HEADER---------------*/
+
+.contenedor-header {
+  background-color: var(--color-fondo);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.soporte {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.soporte i {
+  font-size: 3.3rem;
+}
+
+.contenido-soporte {
+  display: flex;
+  flex-direction: column;
+}
+
+.contenedor-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contenedor-logo i {
+  font-size: 3rem;
+}
+
+.contenedor-logo h1 a {
+  text-decoration: none;
+  color: #000;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.contenedor-usuario {
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.contenedor-usuario .fa-user {
+  font-size: 3rem;
+  color: var(--color-primario);
+  padding-right: 2.5rem;
+  border-right: 1px solid #e2e2e2;
+}
+
+.contenedor-usuario .fa-basket-shopping {
+  font-size: 3rem;
+  color: var(--color-primario);
+  padding-left: 1rem;
+}
+
+.contenido-carro-compras {
+  display: flex;
+  flex-direction: column;
+}
+
+/*?---------------NAVBAR---------------*/
+
+.contenedor-navbar {
+  background-color: var(--color-primario);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.contenedor-navbar .fa-bars {
+  display: none;
+}
+
+.menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: var(--color-oscuro);
+  font-weight: 600;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.menu a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  transition: 0.4s ease-out;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+.menu a:hover {
+  color: #fff;
+}
+
+.formulario-busqueda {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 2px solid #fff;
+  border-radius: 2rem;
+  background-color: #fff;
+  height: 4.4rem;
+  overflow: hidden;
+}
+
+.formulario-busqueda input {
+  outline: none;
+  font-family: inherit;
+  border: none;
+  width: 25rem;
+  font-size: 1.4rem;
+  padding: 0 2rem;
+  color: #777;
+  cursor: pointer;
+}
+
+.formulario-busqueda input::-webkit-search-cancel-button {
+  appearance: none;
+}
+
+.formulario-busqueda .boton-busqueda {
+  border: none;
+  background-color: var(--color-primario);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 1rem;
+}
+
+.boton-busqueda i {
+  font-size: 2rem;
+  color: #fff;
+}
+
+/*?---------------BANNER---------------*/
+
+.banner {
+  background-image: linear-gradient(100deg, #000000, #00000020), url("../img/banner.jpg");
+  height: 60rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.contenido-banner {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 25rem 0;
+}
+
+.contenido-banner p {
+  color: var(--color-primario);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.contenido-banner h2 {
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.contenido-banner a {
+  margin-top: 2rem;
+  text-decoration: none;
+  color: #fff;
+  background-color: var(--color-primario);
+  display: inline-block;
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  border-radius: 3rem;
+}
