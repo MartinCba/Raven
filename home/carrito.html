@@ -11,7 +11,7 @@
     <title>Raven</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body onload="carrito(); total();">
     <header>
       <div class="contenedor-header">
         <div class="contenedor header">
@@ -33,35 +33,7 @@
             ></a>
             <div class="contenido-carro-compras">
               <span class="texto">Carrito</span>
-              <span class="numero">(0)</span>
-              <!-- inicio cart modal -->
-              <div class="modal-carrito">
-                <p class="modal-carrito-titulo">Cart</p>
-                <div class="modal-carrito-contenedor-checkout">
-                  <div class="modal-carrito-contenedor-detalles">
-                    <img
-                      class="modal-carrito-imagen"
-                      src="./images/image-product-1-thumbnail.jpg"
-                      alt=""
-                    />
-                    <div>
-                      <p class="modal-carrito-producto">
-                        Autumn Limited Edition...
-                      </p>
-                      <p class="modal-carrito-precio">
-                        $125 x3 <span>$375.00</span>
-                      </p>
-                    </div>
-                    <img
-                      class="modal-carrito-borrar"
-                      src="./images/icon-delete.svg"
-                      alt="delete"
-                    />
-                  </div>
-                  <button class="modal-carrito-checkout">Checkout</button>
-                </div>
-              </div>
-              <!-- fin cart modal -->
+              <span class="numero" id="numero"></span>
             </div>
           </div>
         </div>
@@ -87,7 +59,21 @@
     </header>
 
     <main class="contenido-main">
-     
+      <section class="contenedor productos-top">
+        <h1 class="encabezado-1">Carrito de compras</h1>
+        <div class="contenedor-opciones">
+          <span class="active">Destacados</span>
+          <span>Más recientes</span>
+          <span>Más Vendidos</span>
+        </div>
+        <div id="contenedor-productos" class="contenedor-productos">
+          <!--? rellenado con js -->
+        </div>
+        <div class="total" id="aca-va-comprar">
+          TOTAL
+          <div id="aca-va-total"><div class="precio-total">$0</div></div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
@@ -164,5 +150,6 @@
         </div>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
