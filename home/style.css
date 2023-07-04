@@ -202,8 +202,7 @@ html {
 /*?---------------BANNER---------------*/
 
 .banner {
-  background-image: linear-gradient(100deg, #000000, #00000020),
-    url("../img/banner.jpg");
+  background-image: linear-gradient(100deg, #000000, #00000020), url("../img/banner.jpg");
   height: 60rem;
   background-size: cover;
   background-position: center;
@@ -266,7 +265,6 @@ html {
 }
 
 .modal-carrito-contenedor-titulo-cierre button {
-  // border: none;
   background-color: #fff;
   color: var(--color-primario);
   padding: 0 1.2rem;
@@ -432,24 +430,21 @@ html {
 }
 
 .categoria-moca {
-  background-image: linear-gradient(#00000080, #00000080),
-    url("../img/moca-category.jpg");
+  background-image: linear-gradient(#00000080, #00000080), url("../img/moca-category.jpg");
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
 }
 
 .categoria-capuchino {
-  background-image: linear-gradient(#00000080, #00000080),
-    url("../img/capuchino-category.jpg");
+  background-image: linear-gradient(#00000080, #00000080), url("../img/capuchino-category.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .categoria-expreso {
-  background-image: linear-gradient(#00000080, #00000080),
-    url("../img/expreso-category.jpg");
+  background-image: linear-gradient(#00000080, #00000080), url("../img/expreso-category.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -813,15 +808,7 @@ html {
 }
 
 .instagram {
-  background: linear-gradient(
-    #405de6,
-    #833ab4,
-    #c13584,
-    #e1306c,
-    #fd1d1d,
-    #f56040,
-    #fcaf45
-  );
+  background: linear-gradient(#405de6, #833ab4, #c13584, #e1306c, #fd1d1d, #f56040, #fcaf45);
 }
 
 .content p {
@@ -878,4 +865,51 @@ html {
 .copyright p {
   font-weight: 400;
   font-size: 1.6rem;
+}
+
+/*?---------------FORMULARIOS---------------*/
+
+#miFormulario {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#miFormulario label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#miFormulario input[type="text"],
+select,
+textarea {
+  width: 95%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  margin-bottom: 12px;
+}
+
+#miFormulario select {
+  height: 36px;
+}
+
+#miFormulario textarea {
+  height: 100px;
+}
+
+#miFormulario input[type="submit"] {
+  background-color: var(--color-primario);
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#miFormulario input[type="submit"]:hover {
+  opacity: 0.8;
 }

@@ -4,10 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/10741a21b4.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/10741a21b4.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Raven</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -28,9 +26,7 @@
           </div>
           <div class="contenedor-usuario">
             <i class="fa-solid fa-user"></i>
-            <a href="carrito.html"
-              ><i class="fa-solid fa-basket-shopping"></i
-            ></a>
+            <a href="carrito.html"><i class="fa-solid fa-basket-shopping"></i></a>
             <div class="contenido-carro-compras">
               <span class="texto">Carrito</span>
               <span class="numero">(0)</span>
@@ -58,14 +54,28 @@
       </div>
     </header>
 
-    <main class="contenido-main">
-      <div class="cuerpo">
-        <h1 class="titular-cuerpo">PRODUCTOS</h1>
+    <main class="contenido-main-contactanos">
+      <h1>Dejanos tus datos asi estamos en contacto</h1>
+      <form id="miFormulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" />
 
-        <div class="ventana" id="div-de-galeria">
-          <div><img src="" alt="" /></div>
-        </div>
-      </div>
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" />
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" />
+
+        <label for="asunto">Asunto:</label>
+        <input type="text" id="asunto" name="asunto" />
+
+        <label for="observaciones">Tu mensaje (opcional):</label>
+        <textarea id="observaciones" name="observaciones"></textarea>
+
+        <div id="divUsoOpcional"></div>
+
+        <input type="submit" value="Enviar" onclick="return validarFormulario();" />
+      </form>
     </main>
 
     <footer class="footer">
@@ -126,8 +136,8 @@
 
             <div class="content">
               <p>
-                Suscríbete a nuestros boletines ahora y mantente al día con
-                nuevas colecciones y ofertas exclusivas.
+                Suscríbete a nuestros boletines ahora y mantente al día con nuevas colecciones y
+                ofertas exclusivas.
               </p>
               <input type="email" placeholder="Ingresa el correo aquí..." />
               <button>Suscríbete</button>
