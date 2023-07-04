@@ -11,7 +11,7 @@
     <title>Raven</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body onload="galeriaMostrar()">
+  <body onload="galeriaMostrar(); contador()">
     <header>
       <div class="contenedor-header">
         <div class="contenedor header">
@@ -33,7 +33,7 @@
             ></a>
             <div class="contenido-carro-compras">
               <span class="texto">Carrito</span>
-              <span class="numero">(0)</span>
+              <span class="numero" id="numero"></span>
             </div>
           </div>
         </div>
@@ -59,17 +59,22 @@
     </header>
 
     <main class="contenido-main">
-      <section class="contenedor productos-top">
-        <h1 class="encabezado-1">Mejores Productos</h1>
-        <div class="contenedor-opciones">
-          <span class="active">Destacados</span>
-          <span>Más recientes</span>
-          <span>Más Vendidos</span>
+      <h1>Cafetería Raven</h1>
+      <div class="contenedor-encontranos">
+        <h3>Podés encontrarnos en nuestra sucursal principal:</h3>
+        <p>Av.Argentina 257 Neuquén, Neuquém, Arg</p>
+        <div class="mapa">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d922.4526772095136!2d-68.05898173930336!3d-38.95257136426401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1688429395790!5m2!1ses-419!2sar"
+            width="90%"
+            height="400px"
+            style="margin: 4rem 5%;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
-        <div id="contenedor-productos" class="contenedor-productos">
-          <!--? rellenado con js -->
-        </div>
-      </section>
+      </div>
     </main>
 
     <footer class="footer">

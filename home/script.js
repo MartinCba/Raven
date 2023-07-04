@@ -205,7 +205,7 @@ function total() {
 
   if (precioTotal > 0) {
     document.getElementById("aca-va-comprar").innerHTML =
-      "<a href='..\\TPFINAL\\compra.html' id='border-comprar'>" +
+      "<a href='..\\home\\compra.html' id='border-comprar'>" +
       comprar +
       "</a>" +
       "TOTAL<div id='aca-va-total'><div class='precio-total'>$0</div>";
@@ -394,21 +394,19 @@ function carrito() {
       compras.forEach(function (compra) {
         if (compra.codigo == e.codigo) {
           temporal +=
-            "<div class='producto-card' ><img src='" +
+            "<div class='producto-carro' ><img src='" +
             e.imagen +
             "' class='img-carrito'><div><h3 class='titulo-carrito'>" +
             e.nombre +
-            "</h3><h3 class='descripcion-carrito'>" +
-            e.descripcion +
-            "</h3></div><div><h5 class='eliminar' onclick='eliminar(" +
+            "</h3></div><div class='eliminar-producto'><i class='fa-solid fa-trash-can' onclick='eliminar(" +
             e.codigo +
-            ")'>Eliminar</h5></div><div class='restar' onclick='resta(" +
+            ")'></i></div><i class='fa-solid fa-minus' onclick='resta(" +
             e.codigo +
-            ")'>-</div><div class='cantidad'><input type='text' class='number' readonly value=" +
+            ")'></i><div class='cantidad'><input type='text' class='number' readonly value=" +
             compra.cantidad +
-            " id='cantidad' id oninput='soloNumeros(event)'></div><div class='sumar' onclick='sumar(" +
+            " id='cantidad' id oninput='soloNumeros(event)'></div><i class='fa-solid fa-plus' onclick='sumar(" +
             e.codigo +
-            ")'>+</div><div class='valor-borde'></div><div class='valor-input'>$" +
+            ")'></i><div class='valor-borde'></div><div class='valor-input'>$" +
             parseFloat(parseFloat(e.precio) * compra.cantidad).toFixed(2) +
             "</div></div>";
         }
@@ -523,7 +521,7 @@ function galeriaMostrar() {
         ')">' +
         '<i class="fa-solid fa-basket-shopping"></i>' +
         "</span>" +
-        '<p class="precio">' +
+        '<p class="precio">$' +
         e.precio +
         "<span>" +
         e.precioDescuento +
