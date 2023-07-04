@@ -152,7 +152,8 @@ function agregarProducto(codigo) {
 
     sessionStorage.setItem("compras", JSON.stringify(compras));
     if (compras != null) {
-      document.getElementById("mensaje-emergente").innerHTML = exitoso;
+      //document.getElementById("mensaje-emergente").innerHTML = exitoso;
+      swal("Éxito", "Producto agregado exitosamente!", "success");
       document.getElementById("numero").innerHTML = "";
       var cantidad = compras.length;
       document.getElementById("numero").innerHTML = cantidad;

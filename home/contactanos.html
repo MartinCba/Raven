@@ -4,12 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://kit.fontawesome.com/10741a21b4.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/10741a21b4.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Raven</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body onload="galeria()">
+  <body onload="contador()">
     <header>
       <div class="contenedor-header">
         <div class="contenedor header">
@@ -26,10 +29,12 @@
           </div>
           <div class="contenedor-usuario">
             <i class="fa-solid fa-user"></i>
-            <a href="carrito.html"><i class="fa-solid fa-basket-shopping"></i></a>
+            <a href="carrito.html"
+              ><i class="fa-solid fa-basket-shopping"></i
+            ></a>
             <div class="contenido-carro-compras">
               <span class="texto">Carrito</span>
-              <span class="numero">(0)</span>
+              <span id="numero" class="numero">0</span>
             </div>
           </div>
         </div>
@@ -74,7 +79,7 @@
 
         <div id="divUsoOpcional"></div>
 
-        <input type="submit" value="Enviar" onclick="return validarFormulario();" />
+        <input type="submit" value="Enviar" onclick="validarFormulario();" />
       </form>
     </main>
 
@@ -136,8 +141,8 @@
 
             <div class="content">
               <p>
-                Suscríbete a nuestros boletines ahora y mantente al día con nuevas colecciones y
-                ofertas exclusivas.
+                Suscríbete a nuestros boletines ahora y mantente al día con
+                nuevas colecciones y ofertas exclusivas.
               </p>
               <input type="email" placeholder="Ingresa el correo aquí..." />
               <button>Suscríbete</button>
@@ -153,5 +158,6 @@
       </div>
     </footer>
     <script src="script.js"></script>
+    <script src="formulario.js"></script>
   </body>
 </html>

@@ -11,7 +11,7 @@
     <title>Raven</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body onload="contador()">
     <header>
       <div class="contenedor-header">
         <div class="contenedor header">
@@ -33,7 +33,7 @@
             ></a>
             <div class="contenido-carro-compras">
               <span class="texto">Carrito</span>
-              <span class="numero">(0)</span>
+              <span id="numero" class="numero">0</span>
             </div>
           </div>
         </div>
@@ -57,13 +57,16 @@
         </nav>
       </div>
     </header>
+    <section class="banner-nosotros">
+      <div class="contenido-banner-nosotros">
+        <p>Sobre Nosotros...</p>
+        <h2>Café Raven</h2>
+        <p>Para los mejores clientes, de los mejores baristas.</p>
+      </div>
+    </section>
 
     <main class="contenido-main">
       <div class="contenedor-nosotros">
-        <div class="cartas-nosotros">
-          <h1>Sobre Nosotros...</h1>
-          <h5>Para los mejores clientes, de los mejores baristas.</h5>
-        </div>
         <div class="texto-nosotros">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
@@ -98,20 +101,46 @@
             quis iaculis felis.
           </p>
         </div>
-        <div class="carta2">imagenes en carrusel</div>
-        <div class="carta3">
-          <h2>Conocé al equipo</h2>
-          <h5>
-            Juntos hacemos que tu dia inicie con una increible taza de café
-          </h5>
-          <div>
-            <div>Martín</div>
-            <div>Diego</div>
-            <div>Julieta</div>
-            <div>Mercedes</div>
-            <div>Claudio</div>
-            <div>María</div>
+      </div>
+
+      <div class="nosotros-equipo">
+        <h2 class="titulo-equipo">Conocé al equipo:</h2>
+        <h5 class="eslogan-equipo">
+          Juntos hacemos que tu dia inicie con una increible taza de café
+        </h5>
+        <div class="equipo">
+          <div class="miembro">
+            <i class="fa-solid fa-user-tie"></i>
+            <h4 class="nombre">Martín</h4>
+            <span class="cargo">CEO</span>
           </div>
+          <div class="miembro">
+            <i class="fa-solid fa-user-tie"></i>
+            <h4 class="nombre">Diego</h4>
+            <span class="cargo">Bartender</span>
+          </div>
+          <div class="miembro">
+            <i class="fa-solid fa-user-tie"></i>
+            <h4 class="nombre">Julieta</h4>
+            <span class="cargo">Marketing</span>
+          </div>
+          <div class="miembro">
+            <i class="fa-solid fa-user-tie"></i>
+            <h4 class="nombre">Mercedes</h4>
+            <span class="cargo">Finanzas</span>
+          </div>
+          <div class="miembro">
+            <i class="fa-solid fa-user-tie"></i>
+            <h4 class="nombre">Claudio</h4>
+            <span class="cargo">Gerente IT</span>
+          </div>
+          <div class="miembro">
+            <i class="fa-solid fa-user-tie"></i>
+            <h4 class="nombre">Rodrigo</h4>
+            <span class="cargo">Reparto</span>
+          </div>
+
+          
         </div>
       </div>
     </main>

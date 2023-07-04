@@ -13,11 +13,9 @@ function validarFormulario() {
   // Obtener los valores de los campos de entrada
   var nombre = document.getElementById("nombre").value.trim();
   var apellido = document.getElementById("apellido").value.trim();
+  var asunto = document.getElementById("asunto").value.trim();
   var email = document.getElementById("email").value;
-  var dia = document.getElementById("dia").value;
-  var mes = document.getElementById("mes").value;
-  var anio = document.getElementById("anio").value;
-  var obrasSociales = document.getElementById("obras_sociales").value;
+
   var observaciones = document.getElementById("observaciones").value;
 
   // Restablecer los estilos de los campos de entrada
@@ -37,6 +35,11 @@ function validarFormulario() {
     resaltarCampo("apellido");
     hayErrores = true;
   }
+  // Validar asunto
+  if (asunto === "") {
+    resaltarCampo("asunto");
+    hayErrores = true;
+  }
 
   // Validar correo electrónico
   if (!validarCorreo(email)) {
@@ -44,31 +47,21 @@ function validarFormulario() {
     hayErrores = true;
   }
 
-  // Validar obra social
-  if (obrasSociales === "") {
-    resaltarCampo("obras_sociales");
+  // Validar observaciones
+  if (observaciones === "") {
+    resaltarCampo("observaciones");
     hayErrores = true;
   }
-
-  // Validar fecha
-  if (!validarFecha(dia, mes, anio)) {
-    resaltarCampo("dia");
-    resaltarCampo("mes");
-    resaltarCampo("anio");
-    hayErrores = true;
-  }
-
-  /* // Validar observaciones
-    if (observaciones === "") {
-      resaltarCampo("observaciones");
-      hayErrores = true;
-    } */
 
   // Mostrar mensaje de éxito o errores
   if (hayErrores) {
     swal("Error", "Por favor, corrija los campos resaltados", "error");
   } else {
-    swal("Éxito", "Todos los datos son correctos!", "success");
+    swal(
+      "Éxito",
+      "Muchas gracias, pronto nos pondremos en contacto!",
+      "success"
+    );
     resetearCampos();
   }
 }
@@ -85,32 +78,6 @@ function validarNombreApellido(cadena) {
   return regexNombreApellido.test(cadena);
 }
 
-function validarFecha(dia, mes, anio) {
-  // Convertir los valores de día, mes y año a enteros
-  dia = parseInt(dia);
-  mes = parseInt(mes);
-  anio = parseInt(anio);
-
-  // Validar si los valores son números enteros positivos
-  if (
-    Number.isInteger(dia) &&
-    Number.isInteger(mes) &&
-    Number.isInteger(anio) &&
-    dia > 0 &&
-    mes > 0 &&
-    anio > 0 &&
-    anio <= 2023
-  ) {
-    // Validar si la fecha es válida
-    var fecha = new Date(anio, mes - 1, dia);
-    if (fecha.getFullYear() === anio && fecha.getMonth() === mes - 1 && fecha.getDate() === dia) {
-      return true;
-    }
-  }
-
-  return false;
-}
-
 function resaltarCampo(campoId) {
   // Cambiar el estilo del borde del campo resaltado
   document.getElementById(campoId).style.border = "2px solid red";
@@ -118,16 +85,7 @@ function resaltarCampo(campoId) {
 
 function resetearEstilos() {
   // Restablecer los estilos de todos los campos de entrada
-  var campos = [
-    "nombre",
-    "apellido",
-    "email",
-    "dia",
-    "mes",
-    "anio",
-    "obras_sociales",
-    "observaciones",
-  ];
+  var campos = ["nombre", "apellido", "email", "asunto", "observaciones"];
   campos.forEach(function (campoId) {
     document.getElementById(campoId).style.border = "";
   });
@@ -138,9 +96,6 @@ function resetearCampos() {
   document.getElementById("nombre").value = "";
   document.getElementById("apellido").value = "";
   document.getElementById("email").value = "";
-  document.getElementById("dia").value = "";
-  document.getElementById("mes").value = "";
-  document.getElementById("anio").value = "";
-  document.getElementById("obras_sociales").value = "";
+  document.getElementById("asunto").value = "";
   document.getElementById("observaciones").value = "";
 }
